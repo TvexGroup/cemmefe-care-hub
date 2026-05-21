@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: TvexGroup/cemmefe-care-hub
+  branch: main
+  base_url: https://cemmefe-care-hub-main.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: public/uploads
+public_folder: /uploads
+
+locale: pt
+
+collections:
+  - name: blog
+    label: Posts do Blog
+    label_singular: Post do Blog
+    folder: src/content/posts
+    create: true
+    delete: true
+    format: json
+    extension: json
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: Título, name: title, widget: string }
+      - label: Categoria
+        name: category
+        widget: select
+        options:
+          - Medicina Fetal
+          - Ginecologia
+          - Obstetrícia
+          - Fertilidade
+          - Saúde Mental
+      - { label: Data, name: date, widget: string, hint: "Ex: 15 Mai 2026" }
+      - { label: Resumo, name: excerpt, widget: text, hint: "Breve descrição exibida na listagem do blog" }
+      - { label: Conteúdo, name: content, widget: markdown }

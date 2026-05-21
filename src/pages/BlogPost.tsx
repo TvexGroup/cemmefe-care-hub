@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import SeoHead from "@/components/SeoHead";
 import { blogPosts } from "./Blog";
 
@@ -34,16 +35,19 @@ const BlogPost = () => {
             <h1 className="text-3xl md:text-4xl font-heading font-bold text-secondary mb-4">{post.title}</h1>
             <p className="text-muted-foreground text-sm mb-8">{post.date}</p>
 
-            <div className="prose prose-lg max-w-none">
-              {post.content.split("\n\n").map((paragraph, i) => (
-                <p key={i} className="text-foreground/80 leading-relaxed mb-4">{paragraph}</p>
-              ))}
+            <div className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-secondary prose-p:text-foreground/80 prose-p:leading-relaxed prose-strong:text-secondary prose-a:text-primary">
+              <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
 
             <div className="mt-12 rounded-2xl bg-primary/10 p-8 text-center">
               <h3 className="font-heading font-semibold text-secondary mb-3">Gostou deste conteúdo?</h3>
               <p className="text-muted-foreground text-sm mb-4">Agende uma consulta com nossos especialistas.</p>
-              <a href="https://wa.me/5542988622662" target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); window.open("https://wa.me/5542988622662", "_blank"); }} className="inline-flex rounded-lg bg-primary px-8 py-3 font-semibold text-secondary transition-transform hover:scale-105">
+              <a
+                href="https://wa.me/5542988622662"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-lg bg-primary px-8 py-3 font-semibold text-secondary transition-transform hover:scale-105"
+              >
                 Agendar Consulta
               </a>
             </div>
