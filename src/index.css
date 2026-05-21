@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 42%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 42%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 42%;
+
+    --primary: 24 89% 81%;
+    --primary-foreground: 0 0% 17%;
+
+    --secondary: 0 0% 33%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 50 5% 95%;
+    --muted-foreground: 0 0% 48%;
+
+    --accent: 24 89% 81%;
+    --accent-foreground: 0 0% 17%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 50 4% 90%;
+    --input: 50 4% 90%;
+    --ring: 24 89% 81%;
+
+    --radius: 0.75rem;
+
+    --hero-overlay: linear-gradient(135deg, hsla(24, 89%, 81%, 0.85) 0%, hsla(0, 0%, 17%, 0.7) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(24, 89%, 81%) 0%, hsl(24, 70%, 70%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(50, 5%, 95%) 0%, hsl(0, 0%, 100%) 100%);
+
+    --footer: 24 93% 91%;
+    --footer-foreground: 0 0% 33%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-warm);
+  }
+  .hero-overlay {
+    background: var(--hero-overlay);
+  }
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+}
