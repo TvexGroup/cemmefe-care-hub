@@ -14,7 +14,7 @@ export default function handler(req: any, res: any) {
     // Set HttpOnly cookie valid for 8 hours
     res.setHeader(
       'Set-Cookie',
-      `cms-auth=1; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=28800`
+      `cms-auth=1; Path=/; Secure; SameSite=Strict; Max-Age=28800`
     );
     return res.status(200).json({ ok: true });
   }
