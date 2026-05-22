@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, Clock, Instagram, MapPin, MessageCircle } from "lucide-react";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
-import heroContato from "@/assets/hero-contato.jpg";
+import { images } from "@/config/images";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
@@ -27,7 +27,7 @@ const Contato = () => {
     <>
       <SeoHead title="Contato | CEMMEFE - Fale Conosco" description="Entre em contato com a CEMMEFE. Telefone, WhatsApp, e-mail e formulário de contato. Agende sua consulta." path="/contato" />
 
-      <HeroBanner title="Fale Conosco" subtitle="Estamos prontos para atender você" image={heroContato} />
+      <HeroBanner title="Fale Conosco" subtitle="Estamos prontos para atender você" image={images.contatoBanner} />
 
       <section className="section-padding">
         <div className="container mx-auto">

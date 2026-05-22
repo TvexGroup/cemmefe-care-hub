@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { Crosshair, ScanEye, HeartHandshake, ChevronRight, HandHeart, Gift, Sprout } from "lucide-react";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
-import heroSobre from "@/assets/hero-sobre-new.jpg";
-import heroEquipe from "@/assets/hero-equipe-new.jpg";
+import { images } from "@/config/images";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
@@ -28,14 +27,14 @@ const Sobre = () => (
   <>
     <SeoHead title="Sobre | CEMMEFE - Centro Médico e Medicina Fetal em São Mateus do Sul" description="Conheça a história do CEMMEFE, fundado em 2010 em São Mateus do Sul. Mais de 25 anos de experiência em ginecologia, obstetrícia e medicina fetal." path="/sobre" />
 
-    <HeroBanner title="Nossa História e Missão" subtitle="Conheça a CEMMEFE e nosso compromisso com a saúde da mulher" image={heroSobre} />
+    <HeroBanner title="Nossa História e Missão" subtitle="Conheça a CEMMEFE e nosso compromisso com a saúde da mulher" image={images.sobreBanner} />
 
     {/* Quem Somos — visual destaque */}
     <section className="section-padding bg-background">
       <div className="container mx-auto max-w-5xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div {...fadeUp}>
-            <img src={heroEquipe} alt="Equipe CEMMEFE" className="w-full rounded-xl object-cover aspect-[4/3]" />
+            <img src={images.sobreEquipe} alt="Equipe CEMMEFE" className="w-full rounded-xl object-cover aspect-[4/3]" />
             <blockquote className="mt-6 border-l-2 border-primary pl-4 text-muted-foreground italic text-sm">
               "Cuidado personalizado para cada paciente, em cada momento."
             </blockquote>

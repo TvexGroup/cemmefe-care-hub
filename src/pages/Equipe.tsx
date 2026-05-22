@@ -3,8 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Instagram, X } from "lucide-react";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
-import heroEquipe from "@/assets/hero-equipe-new.jpg";
-import doctorPlaceholder from "@/assets/doctor-placeholder.jpg";
+import { images } from "@/config/images";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
@@ -12,7 +11,7 @@ const doctors = [
   {
     name: "Dra. Cristina Veloso Andreacci",
     specialty: "Medicina Fetal, Ginecologia e Obstetrícia",
-    img: doctorPlaceholder,
+    img: images.draCristina,
     instagram: "https://www.instagram.com/drcristinaveloso/",
     shortBio: "Fundadora do CEMMEFE, especialista em Medicina Fetal com certificação internacional pela Fetal Medicine Foundation (Londres). Mais de 25 anos dedicados à saúde da mulher.",
     fullBio: [
@@ -35,7 +34,7 @@ const doctors = [
   {
     name: "Helen Cordeiro",
     specialty: "Consultora Materna e Cuidados Perinatais",
-    img: doctorPlaceholder,
+    img: images.helen,
     instagram: "",
     shortBio: "Enfermeira obstétrica e consultora internacional em lactação (IBCLC). Especialista em cuidados maternos, laserterapia e acompanhamento pós-parto.",
     fullBio: [
@@ -50,12 +49,12 @@ const doctors = [
 ];
 
 const staff = [
-  { name: "Nome do Profissional", role: "Enfermeira", img: doctorPlaceholder },
-  { name: "Nome do Profissional", role: "Técnica de Enfermagem", img: doctorPlaceholder },
-  { name: "Nome do Profissional", role: "Recepcionista", img: doctorPlaceholder },
-  { name: "Nome do Profissional", role: "Auxiliar Administrativo", img: doctorPlaceholder },
-  { name: "Nome do Profissional", role: "Técnica em Ultrassonografia", img: doctorPlaceholder },
-  { name: "Nome do Profissional", role: "Recepcionista", img: doctorPlaceholder },
+  { name: "Nome do Profissional", role: "Enfermeira", img: images.funcionaria1 },
+  { name: "Nome do Profissional", role: "Técnica de Enfermagem", img: images.funcionaria2 },
+  { name: "Nome do Profissional", role: "Recepcionista", img: images.funcionaria3 },
+  { name: "Nome do Profissional", role: "Auxiliar Administrativo", img: images.funcionaria4 },
+  { name: "Nome do Profissional", role: "Técnica em Ultrassonografia", img: images.funcionaria5 },
+  { name: "Nome do Profissional", role: "Recepcionista", img: images.funcionaria6 },
 ];
 
 const Equipe = () => {
@@ -65,7 +64,7 @@ const Equipe = () => {
     <>
       <SeoHead title="Equipe | CEMMEFE - Profissionais Especializados em São Mateus do Sul" description="Conheça os profissionais da CEMMEFE: Dra. Cristina Veloso Andreacci, especialista em medicina fetal, e Helen Cordeiro, consultora materna." path="/equipe" />
 
-      <HeroBanner title="Nossa Equipe" subtitle="Profissionais dedicados ao cuidado da mulher" image={heroEquipe} />
+      <HeroBanner title="Nossa Equipe" subtitle="Profissionais dedicados ao cuidado da mulher" image={images.equipeBanner} />
 
       {/* Doctors */}
       <section className="section-padding bg-background">

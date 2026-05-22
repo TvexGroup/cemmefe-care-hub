@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
-import heroConvenios from "@/assets/hero-convenios.jpg";
+import { images } from "@/config/images";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
@@ -20,7 +20,7 @@ const Convenios = () => (
   <>
     <SeoHead title="Convênios | CEMMEFE - Convênios Aceitos" description="Confira os convênios aceitos pela CEMMEFE. Entre em contato para mais informações." path="/convenios" />
 
-    <HeroBanner title="Convênios Aceitos" subtitle="Confira os convênios atendidos pela CEMMEFE" image={heroConvenios} />
+    <HeroBanner title="Convênios Aceitos" subtitle="Confira os convênios atendidos pela CEMMEFE" image={images.conveniosBanner} />
 
     <section className="section-padding">
       <div className="container mx-auto max-w-4xl">

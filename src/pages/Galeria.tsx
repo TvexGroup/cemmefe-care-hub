@@ -3,39 +3,37 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
-import heroHome from "@/assets/hero-home.jpg";
-import heroServicos from "@/assets/hero-servicos.jpg";
-import galleryClinic from "@/assets/gallery-clinic.jpg";
+import { images } from "@/config/images";
 
 const tabs = [
   {
     key: "clinica",
     title: "Clínica",
     images: [
-      { src: heroHome, alt: "Recepção da clínica CEMMEFE", caption: "Recepção" },
-      { src: galleryClinic, alt: "Sala de exames CEMMEFE", caption: "Sala de exames" },
-      { src: heroServicos, alt: "Sala de laudos CEMMEFE", caption: "Sala de laudos" },
-      { src: heroHome, alt: "Espaço acolhedor", caption: "Espaço de espera" },
+      { src: images.galeriaClinica1, alt: "Recepção da clínica CEMMEFE", caption: "Recepção" },
+      { src: images.galeriaClinica2, alt: "Sala de exames CEMMEFE", caption: "Sala de exames" },
+      { src: images.galeriaClinica3, alt: "Sala de laudos CEMMEFE", caption: "Sala de laudos" },
+      { src: images.galeriaClinica4, alt: "Espaço acolhedor", caption: "Espaço de espera" },
     ],
   },
   {
     key: "equipamentos",
     title: "Equipamentos",
     images: [
-      { src: heroServicos, alt: "Equipamento de ultrassonografia", caption: "Ultrassonografia" },
-      { src: galleryClinic, alt: "Sala de procedimentos", caption: "Sala de procedimentos" },
-      { src: heroHome, alt: "Equipamento moderno", caption: "Equipamentos modernos" },
-      { src: heroServicos, alt: "Equipamento de diagnóstico", caption: "Diagnóstico por imagem" },
+      { src: images.galeriaEquipamento1, alt: "Equipamento de ultrassonografia", caption: "Ultrassonografia" },
+      { src: images.galeriaEquipamento2, alt: "Sala de procedimentos", caption: "Sala de procedimentos" },
+      { src: images.galeriaEquipamento3, alt: "Equipamento moderno", caption: "Equipamentos modernos" },
+      { src: images.galeriaEquipamento4, alt: "Equipamento de diagnóstico", caption: "Diagnóstico por imagem" },
     ],
   },
   {
     key: "eventos",
     title: "Eventos",
     images: [
-      { src: heroHome, alt: "Evento CEMMEFE", caption: "Encontro com pacientes" },
-      { src: galleryClinic, alt: "Palestra CEMMEFE", caption: "Palestra educativa" },
-      { src: heroServicos, alt: "Workshop CEMMEFE", caption: "Workshop da equipe" },
-      { src: heroHome, alt: "Confraternização CEMMEFE", caption: "Confraternização" },
+      { src: images.galeriaEvento1, alt: "Evento CEMMEFE", caption: "Encontro com pacientes" },
+      { src: images.galeriaEvento2, alt: "Palestra CEMMEFE", caption: "Palestra educativa" },
+      { src: images.galeriaEvento3, alt: "Workshop CEMMEFE", caption: "Workshop da equipe" },
+      { src: images.galeriaEvento4, alt: "Confraternização CEMMEFE", caption: "Confraternização" },
     ],
   },
 ];

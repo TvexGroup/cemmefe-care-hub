@@ -4,11 +4,7 @@ import { blogPosts } from "@/pages/Blog";
 import { motion } from "framer-motion";
 import { Star, ChevronRight, ChevronLeft, CalendarCheck, Building2, MapPin, Monitor, Plus, Minus, Clock, Stethoscope, Heart, Award } from "lucide-react";
 import SeoHead from "@/components/SeoHead";
-import heroSlide1 from "@/assets/hero-slide-1.jpg";
-import heroSlide2 from "@/assets/hero-slide-2.jpg";
-import heroSlide3 from "@/assets/hero-slide-3.jpg";
-import heroHome from "@/assets/hero-sobre-new.jpg";
-import doctorPlaceholder from "@/assets/doctor-placeholder.jpg";
+import { images } from "@/config/images";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -19,7 +15,7 @@ const fadeUp = {
 
 const heroSlides = [
   {
-    image: heroSlide1,
+    image: images.slide1,
     title: "Cuidando da sua",
     titleAccent: "saúde",
     titleEnd: "com",
@@ -27,7 +23,7 @@ const heroSlides = [
     subtitle: "Atendimento humanizado em medicina fetal, ginecologia e obstetrícia. Sua saúde e a do seu bebê são nossa prioridade.",
   },
   {
-    image: heroSlide2,
+    image: images.slide2,
     title: "Tecnologia de ponta",
     titleAccent: "a serviço",
     titleEnd: "da sua",
@@ -35,7 +31,7 @@ const heroSlides = [
     subtitle: "Equipamentos de última geração e diagnóstico de alta precisão para o melhor cuidado.",
   },
   {
-    image: heroSlide3,
+    image: images.slide3,
     title: "Equipe especializada",
     titleAccent: "e atendimento",
     titleEnd: "",
@@ -312,7 +308,7 @@ const Index = () => {
       {/* CTA Banner */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroHome} alt="Clínica CEMMEFE" className="w-full h-full object-cover" />
+          <img src={images.homepageClinica} alt="Clínica CEMMEFE" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 container mx-auto text-left md:text-center px-4">
@@ -336,8 +332,8 @@ const Index = () => {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {[
-              { img: doctorPlaceholder, name: "Dra. Cristina Veloso Andreacci", specialty: "Medicina Fetal, Ginecologia e Obstetrícia" },
-              { img: doctorPlaceholder, name: "Helen Cordeiro", specialty: "Consultora Materna e Cuidados Perinatais" },
+              { img: images.homepageDraCristina, name: "Dra. Cristina Veloso Andreacci", specialty: "Medicina Fetal, Ginecologia e Obstetrícia" },
+              { img: images.homepageHelen, name: "Helen Cordeiro", specialty: "Consultora Materna e Cuidados Perinatais" },
             ].map((doc, i) => (
               <motion.div key={doc.name} {...fadeUp} transition={{ delay: i * 0.15 }} className="rounded-xl bg-background overflow-hidden border border-border hover:shadow-sm transition-shadow">
                 <img src={doc.img} alt={doc.name} className="w-full h-64 object-cover" loading="lazy" />

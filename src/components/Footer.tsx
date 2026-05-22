@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Instagram, Facebook, Youtube, Clock } from "lucide-react";
-import logoFull from "@/assets/logo-full.png";
+import { images } from "@/config/images";
 
 const Footer = () => (
   <footer style={{ backgroundColor: '#FDE2D4' }} className="text-secondary">
@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
         {/* Brand */}
         <div>
-          <img src={logoFull} alt="CEMMEFE" className="h-16 mb-4" />
+          <img src={images.logoRodape} alt="CEMMEFE" className="h-16 mb-4" />
           <p className="text-muted-foreground text-sm leading-relaxed">
             Cuidado integral para cada mulher, em cada fase da vida.
           </p>

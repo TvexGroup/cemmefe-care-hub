@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
-import heroServicos from "@/assets/hero-servicos-new.jpg";
+import { images } from "@/config/images";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
@@ -76,7 +76,7 @@ const Servicos = () => {
     <>
       <SeoHead title="Serviços | CEMMEFE - Ginecologia, Obstetrícia e Medicina Fetal" description="Conheça os serviços da CEMMEFE: consultas, procedimentos, ultrassonografia, protocolos e exames especializados em saúde da mulher." path="/servicos" />
 
-      <HeroBanner title="Nossos Serviços" subtitle="Cuidado completo e especializado para a saúde da mulher" image={heroServicos} />
+      <HeroBanner title="Nossos Serviços" subtitle="Cuidado completo e especializado para a saúde da mulher" image={images.servicosBanner} />
 
       <section className="section-padding">
         <div className="container mx-auto max-w-5xl">

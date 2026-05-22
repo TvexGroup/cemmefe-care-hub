@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
-import heroBlog from "@/assets/hero-blog.jpg";
+import { images } from "@/config/images";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
@@ -32,7 +32,7 @@ const Blog = () => (
   <>
     <SeoHead title="Blog | CEMMEFE - Saúde da Mulher em Foco" description="Artigos e informações sobre saúde da mulher, ginecologia, obstetrícia e medicina fetal." path="/blog" />
 
-    <HeroBanner title="Blog CEMMEFE" subtitle="Saúde da Mulher em Foco" image={heroBlog} />
+    <HeroBanner title="Blog CEMMEFE" subtitle="Saúde da Mulher em Foco" image={images.blogBanner} />
 
     <section className="section-padding">
       <div className="container mx-auto">
