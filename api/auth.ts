@@ -4,7 +4,7 @@ export default async function handler(req: any, res: any) {
   const CLIENT_ID = process.env.GITHUB_CLIENT_ID!;
   const CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET!;
 
-  // Step 1 — no code yet: redirect user to GitHub to authorize
+  // Step 1 — no code yet: redirect to GitHub OAuth
   if (!code) {
     const params = new URLSearchParams({
       client_id: CLIENT_ID,
@@ -39,28 +39,34 @@ export default async function handler(req: any, res: any) {
     };
 
     if (data.access_token) {
-      const content = JSON.stringify({
+      // Two-step handshake protocol that Decap CMS expects:
+      // 1. Post "authorizing:github" to opener to signal readiness
+      // 2. Wait for opener to respond, then send the token back using e.origin
+      const tokenJson = JSON.stringify({
         token: data.access_token,
         provider: "github",
       });
-      // Post token back to Decap CMS opener window
+
       return res.send(`<!DOCTYPE html>
 <html>
 <body>
 <script>
-(function () {
-  const msg = 'authorization:github:success:' + ${JSON.stringify(content)};
-  window.opener.postMessage(msg, '*');
-  window.close();
+(function() {
+  function receiveMessage(e) {
+    window.opener.postMessage(
+      'authorization:github:success:${tokenJson}',
+      e.origin
+    );
+  }
+  window.addEventListener("message", receiveMessage, false);
+  window.opener.postMessage("authorizing:github", "*");
 })();
 </script>
 </body>
 </html>`);
     }
 
-    return res
-      .status(400)
-      .json({ error: data.error || "OAuth failed" });
+    return res.status(400).json({ error: data.error || "OAuth failed" });
   } catch {
     return res.status(500).json({ error: "Server error" });
   }
