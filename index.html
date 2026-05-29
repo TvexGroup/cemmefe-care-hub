@@ -4,44 +4,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CEMMEFE - Centro Médico e Medicina Fetal | Ginecologia e Obstetrícia</title>
-    <meta name="description" content="CEMMEFE - Centro Médico e Medicina Fetal. Ginecologia, obstetrícia, ultrassonografia e medicina fetal. Agende sua consulta.">
+    <meta name="description" content="CEMMEFE - Centro Médico e Medicina Fetal. Ginecologia, obstetrícia, ultrassonografia e medicina fetal em São Mateus do Sul - PR. Agende sua consulta.">
     <meta name="author" content="CEMMEFE" />
     <link rel="canonical" href="https://cemmefe.com.br/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    
-    
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cemmefe.com.br/" />
+    <meta property="og:title" content="CEMMEFE - Centro Médico e Medicina Fetal | Ginecologia e Obstetrícia" />
+    <meta property="og:description" content="CEMMEFE - Centro Médico e Medicina Fetal. Ginecologia, obstetrícia, ultrassonografia e medicina fetal em São Mateus do Sul - PR. Agende sua consulta." />
+    <meta property="og:image" content="https://res.cloudinary.com/danfky4zs/image/upload/0G6A1403_q9pk2q" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="CEMMEFE" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CEMMEFE - Centro Médico e Medicina Fetal | Ginecologia e Obstetrícia" />
+    <meta name="twitter:description" content="CEMMEFE - Centro Médico e Medicina Fetal. Ginecologia, obstetrícia, ultrassonografia e medicina fetal em São Mateus do Sul - PR. Agende sua consulta." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/danfky4zs/image/upload/0G6A1403_q9pk2q" />
 
+    <!-- Structured Data: MedicalBusiness + LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
+      "@type": ["MedicalBusiness", "LocalBusiness"],
       "name": "CEMMEFE - Centro Médico e Medicina Fetal",
+      "description": "Centro médico especializado em ginecologia, obstetrícia, ultrassonografia e medicina fetal em São Mateus do Sul, Paraná.",
       "telephone": "+554235321037",
       "email": "contato@cemmefe.com.br",
       "url": "https://cemmefe.com.br",
+      "logo": "https://res.cloudinary.com/danfky4zs/image/upload/Logo_com_espaço_em_branco_cortado_nq2n44",
+      "image": "https://res.cloudinary.com/danfky4zs/image/upload/0G6A1403_q9pk2q",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua XV de Novembro, 2369",
+        "addressLocality": "São Mateus do Sul",
+        "addressRegion": "PR",
+        "postalCode": "83900-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8769,
+        "longitude": -50.3837
+      },
       "sameAs": [
         "https://www.instagram.com/cemmefesms/",
         "https://www.instagram.com/matheusvelosolopes/",
         "https://www.instagram.com/drcristinaveloso/"
       ],
-      "medicalSpecialty": ["Gynecology", "Obstetrics"],
-      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"]
+      "medicalSpecialty": ["Gynecology", "Obstetrics", "UltrasoundImaging"],
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ]
     }
     </script>
-    <meta property="og:title" content="CEMMEFE - Centro Médico e Medicina Fetal | Ginecologia e Obstetrícia">
-  <meta name="twitter:title" content="CEMMEFE - Centro Médico e Medicina Fetal | Ginecologia e Obstetrícia">
-  <meta property="og:description" content="CEMMEFE - Centro Médico e Medicina Fetal. Ginecologia, obstetrícia, ultrassonografia e medicina fetal. Agende sua consulta.">
-  <meta name="twitter:description" content="CEMMEFE - Centro Médico e Medicina Fetal. Ginecologia, obstetrícia, ultrassonografia e medicina fetal. Agende sua consulta.">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c14f186b-b72b-410d-914d-b054e7396aaf/id-preview-685f71de--2b73f296-6a50-4a1a-8225-0c70180d2480.lovable.app-1775137335906.png">
-  <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c14f186b-b72b-410d-914d-b054e7396aaf/id-preview-685f71de--2b73f296-6a50-4a1a-8225-0c70180d2480.lovable.app-1775137335906.png">
-</head>
+
+    <!-- Google Consent Mode v2 defaults (must come before GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 2000
+      });
+      // If user already consented in a previous session, grant immediately
+      if (localStorage.getItem('cookie-consent') === 'true') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
+
+    <!-- Google Tag Manager — replace GTM-XXXXXXX with your real Container ID -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5G3MN6QK');</script>
+    <!-- End Google Tag Manager -->
+  </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) — replace GTM-XXXXXXX with your real Container ID -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G3MN6QK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

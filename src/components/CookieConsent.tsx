@@ -1,16 +1,45 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
+  }
+}
+
+const grantConsent = () => {
+  window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag === "function") {
+    window.gtag("consent", "update", {
+      ad_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      analytics_storage: "granted",
+    });
+  }
+};
+
 const CookieConsent = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     const accepted = localStorage.getItem("cookie-consent");
-    if (!accepted) setTimeout(() => setShow(true), 2000);
+    if (accepted === "true") {
+      grantConsent();
+    } else {
+      setTimeout(() => setShow(true), 2000);
+    }
   }, []);
 
   const accept = () => {
     localStorage.setItem("cookie-consent", "true");
+    grantConsent();
+    setShow(false);
+  };
+
+  const decline = () => {
+    localStorage.setItem("cookie-consent", "false");
     setShow(false);
   };
 
@@ -25,14 +54,27 @@ const CookieConsent = () => {
         >
           <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade (LGPD).
+              Utilizamos cookies para melhorar sua experiência e analisar o tráfego do site.
+              Ao aceitar, você concorda com nossa{" "}
+              <a href="/contato" className="underline hover:text-primary">
+                política de privacidade
+              </a>{" "}
+              (LGPD).
             </p>
-            <button
-              onClick={accept}
-              className="shrink-0 rounded-lg bg-primary px-6 py-2 text-sm font-semibold text-secondary transition-transform hover:scale-105"
-            >
-              Aceitar
-            </button>
+            <div className="flex shrink-0 gap-2">
+              <button
+                onClick={decline}
+                className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted"
+              >
+                Recusar
+              </button>
+              <button
+                onClick={accept}
+                className="rounded-lg bg-primary px-6 py-2 text-sm font-semibold text-secondary transition-transform hover:scale-105"
+              >
+                Aceitar
+              </button>
+            </div>
           </div>
         </motion.div>
       )}
