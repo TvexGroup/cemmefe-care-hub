@@ -2,20 +2,27 @@ import { motion } from "framer-motion";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
 import { images } from "@/config/images";
+import logoCDL from "@/assets/CDL.jpg";
+import logoMILI from "@/assets/MILI.png";
+import logoUnimed from "@/assets/Unimed.webp";
+import logoBradesco from "@/assets/Bradesco.png";
+import logoPetrobras from "@/assets/Petrobrás.jpg";
+import logoSaoCamilo from "@/assets/São Camilo.avif";
+import logoMedprev from "@/assets/Medprev.png";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
 const conveniosAtivos = [
-  { name: "CDL" },
-  { name: "MILI" },
+  { name: "CDL",  logo: logoCDL },
+  { name: "MILI", logo: logoMILI },
 ];
 
 const conveniosPendentes = [
-  { name: "Unimed" },
-  { name: "Bradesco" },
-  { name: "Petrobras" },
-  { name: "São Camilo" },
-  { name: "Medprev" },
+  { name: "Unimed",     logo: logoUnimed },
+  { name: "Bradesco",   logo: logoBradesco },
+  { name: "Petrobras",  logo: logoPetrobras },
+  { name: "São Camilo", logo: logoSaoCamilo },
+  { name: "Medprev",    logo: logoMedprev },
 ];
 
 const Convenios = () => (
@@ -36,9 +43,7 @@ const Convenios = () => (
               transition={{ delay: i * 0.05 }}
               className="rounded-xl border border-border bg-background p-6 flex flex-col items-center justify-center text-left md:text-center hover:shadow-sm transition-shadow"
             >
-              <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
-                <span className="text-muted-foreground text-xs font-medium">Logo</span>
-              </div>
+              <img src={c.logo} alt={`Logo ${c.name}`} className="h-14 w-auto object-contain mb-4" />
               <p className="font-semibold text-secondary text-sm">{c.name}</p>
             </motion.div>
           ))}
@@ -55,9 +60,7 @@ const Convenios = () => (
                 transition={{ delay: i * 0.05 }}
                 className="rounded-xl border border-dashed border-border bg-muted/40 p-6 flex flex-col items-center justify-center text-left md:text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
-                  <span className="text-muted-foreground text-xs font-medium">Logo</span>
-                </div>
+                <img src={c.logo} alt={`Logo ${c.name}`} className="h-14 w-auto object-contain mb-4 opacity-60" />
                 <p className="font-semibold text-secondary text-sm mb-2">{c.name}</p>
                 <span className="text-[11px] font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
                   Em certificação

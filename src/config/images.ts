@@ -21,11 +21,12 @@ export const images = {
 
   // ── PÁGINA INICIAL — Seção "Sobre a clínica" ───────────────────────────────
   homepageClinica:    c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),
-  homepageUltrassom:  c("0G6A0104_y0wdfo"),                             // Equipamento de ultrassonografia
+  homepageUltrassom:  c("copy_of_0g6a0096_byazeh"),                      // Equipamento de ultrassonografia
 
   // ── PÁGINA INICIAL — Seção "Nossa Equipe" ─────────────────────────────────
   homepageDraCristina: c("0G6A9923_vkkoto"),    // Foto Dra. Cristina (card na homepage)
   homepageHelen:       c("0G6A9952_xuqacc"),    // Foto Dr. Matheus Veloso (card na homepage)
+  homepageEduardo:     c("WhatsApp_Image_2026-05-08_at_18.14.13_1_l3f0se"), // Foto Eduardo Veloso (card na homepage)
 
   // ── PÁGINA SOBRE ───────────────────────────────────────────────────────────
   sobreBanner:  c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),  // Foto no topo da página Sobre
@@ -38,6 +39,7 @@ export const images = {
   equipeBanner:  c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),  // Foto no topo da página Equipe
   draCristina:   c("0G6A0127_obbn7h"),   // Foto Dra. Cristina Veloso Andreacci
   helen:         c("0G6A0006_mqxuj8"),   // Foto Dr. Matheus Veloso
+  eduardo:       c("WhatsApp_Image_2026-05-08_at_18.14.13_1_l3f0se"), // Foto Eduardo Veloso
   funcionaria1:  c(""),   // Enfermeira
   funcionaria2:  c(""),   // Técnica de Enfermagem
   funcionaria3:  c(""),   // Recepcionista

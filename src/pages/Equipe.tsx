@@ -43,6 +43,18 @@ const doctors = [
       "Especialização em Cirurgia por Videolaparoscopia",
     ],
   },
+  {
+    name: "Eduardo Veloso",
+    specialty: "Psicólogo • Especialista em TCC",
+    img: images.eduardo,
+    instagram: "https://www.instagram.com/psi.eduardoveloso/",
+    shortBio: "Psicólogo especialista em Terapia Cognitivo Comportamental (TCC), com foco em protocolos para ansiedade e performance.",
+    fullBio: [
+      "Especialista em Terapia Cognitivo Comportamental (TCC)",
+      "Protocolos especializados para transtornos de ansiedade",
+      "Psicologia da performance e desenvolvimento humano",
+    ],
+  },
 ];
 
 const staff = [
@@ -67,10 +79,10 @@ const Equipe = () => {
       <section className="section-padding bg-background">
         <div className="container mx-auto max-w-5xl">
           <motion.h2 {...fadeUp} className="text-3xl font-heading font-bold text-secondary text-left md:text-center mb-12">Corpo Clínico</motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {doctors.map((doc, i) => (
               <motion.div key={doc.name} {...fadeUp} transition={{ delay: i * 0.15 }} className="rounded-xl bg-background border border-border overflow-hidden">
-                <img src={doc.img} alt={doc.name} className="w-full h-72 object-cover" loading="lazy" />
+                <img src={doc.img} alt={doc.name} className="w-full h-60 object-cover" loading="lazy" />
                 <div className="p-6">
                   <h3 className="text-xl font-heading font-semibold text-secondary">{doc.name}</h3>
                   <p className="text-primary font-medium text-sm mb-3">{doc.specialty}</p>
