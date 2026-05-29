@@ -333,7 +333,7 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {[
               { img: images.homepageDraCristina, name: "Dra. Cristina Veloso Andreacci", specialty: "Medicina Fetal, Ginecologia e Obstetrícia" },
-              { img: images.homepageHelen, name: "Helen Cordeiro", specialty: "Consultora Materna e Cuidados Perinatais" },
+              { img: images.homepageHelen, name: "Dr. Matheus Veloso", specialty: "Ginecologista e Obstetra" },
             ].map((doc, i) => (
               <motion.div key={doc.name} {...fadeUp} transition={{ delay: i * 0.15 }} className="rounded-xl bg-background overflow-hidden border border-border hover:shadow-sm transition-shadow">
                 <img src={doc.img} alt={doc.name} className="w-full h-64 object-cover" loading="lazy" />

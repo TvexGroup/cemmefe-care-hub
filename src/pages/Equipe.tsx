@@ -10,7 +10,7 @@ const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0
 const doctors = [
   {
     name: "Dra. Cristina Veloso Andreacci",
-    specialty: "Medicina Fetal, Ginecologia e Obstetrícia",
+    specialty: "Medicina Fetal, Ginecologia, Obstetrícia e Reprodução Humana",
     img: images.draCristina,
     instagram: "https://www.instagram.com/drcristinaveloso/",
     shortBio: "Fundadora do CEMMEFE, especialista em Medicina Fetal com certificação internacional pela Fetal Medicine Foundation (Londres). Mais de 25 anos dedicados à saúde da mulher.",
@@ -32,18 +32,15 @@ const doctors = [
     ],
   },
   {
-    name: "Helen Cordeiro",
-    specialty: "Consultora Materna e Cuidados Perinatais",
+    name: "Dr. Matheus Veloso",
+    specialty: "Ginecologista e Obstetra",
     img: images.helen,
-    instagram: "",
-    shortBio: "Enfermeira obstétrica e consultora internacional em lactação (IBCLC). Especialista em cuidados maternos, laserterapia e acompanhamento pós-parto.",
+    instagram: "https://www.instagram.com/matheusvelosolopes/",
+    shortBio: "Ginecologista e Obstetra formado pela Pontifícia Universidade Católica do Paraná (PUC-PR). Especialista em cirurgia robótica e cirurgia por videolaparoscopia.",
     fullBio: [
-      "Graduação em Enfermagem pela Universidade Federal do Espírito Santo (2001)",
-      "Consultora Internacional em Lactação – IBCLC",
-      "Laserterapeuta",
-      "Atendimento na CEMMEFE: Golden Hour, Laserterapia, SOS Mamãe e Bebê",
-      "Consultoria de retorno ao trabalho e desmame gentil",
-      "Consultoria do sono infantil",
+      "Graduação em Medicina pela Pontifícia Universidade Católica do Paraná (PUC-PR)",
+      "Especialização em Cirurgia Robótica",
+      "Especialização em Cirurgia por Videolaparoscopia",
     ],
   },
 ];
@@ -62,7 +59,7 @@ const Equipe = () => {
 
   return (
     <>
-      <SeoHead title="Equipe | CEMMEFE - Profissionais Especializados em São Mateus do Sul" description="Conheça os profissionais da CEMMEFE: Dra. Cristina Veloso Andreacci, especialista em medicina fetal, e Helen Cordeiro, consultora materna." path="/equipe" />
+      <SeoHead title="Equipe | CEMMEFE - Profissionais Especializados em São Mateus do Sul" description="Conheça os profissionais da CEMMEFE: Dra. Cristina Veloso Andreacci, especialista em medicina fetal, e Dr. Matheus Veloso, Ginecologista e Obstetra." path="/equipe" />
 
       <HeroBanner title="Nossa Equipe" subtitle="Profissionais dedicados ao cuidado da mulher" image={images.equipeBanner} />
 

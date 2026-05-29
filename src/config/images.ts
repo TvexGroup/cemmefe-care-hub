@@ -23,20 +23,20 @@ export const images = {
   homepageClinica: c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),
 
   // ── PÁGINA INICIAL — Seção "Nossa Equipe" ─────────────────────────────────
-  homepageDraCristina: c(""),    // Foto Dra. Cristina (card na homepage)
-  homepageHelen:       c(""),    // Foto Helen Cordeiro (card na homepage)
+  homepageDraCristina: c("0G6A9923_vkkoto"),    // Foto Dra. Cristina (card na homepage)
+  homepageHelen:       c("0G6A9952_xuqacc"),    // Foto Dr. Matheus Veloso (card na homepage)
 
   // ── PÁGINA SOBRE ───────────────────────────────────────────────────────────
   sobreBanner:  c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),  // Foto no topo da página Sobre
   sobreEquipe:  c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),  // Foto da equipe na página Sobre
 
   // ── PÁGINA SERVIÇOS ────────────────────────────────────────────────────────
-  servicosBanner: c(""),  // Foto no topo da página Serviços
+  servicosBanner: c("65b2284e-c5d1-43d0-93d9-45b693c34f61_lj0o6l"),  // Foto no topo da página Serviços
 
   // ── PÁGINA EQUIPE ──────────────────────────────────────────────────────────
   equipeBanner:  c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),  // Foto no topo da página Equipe
-  draCristina:   c(""),   // Foto Dra. Cristina Veloso Andreacci
-  helen:         c(""),   // Foto Helen Cordeiro
+  draCristina:   c("0G6A0127_obbn7h"),   // Foto Dra. Cristina Veloso Andreacci
+  helen:         c("0G6A0006_mqxuj8"),   // Foto Dr. Matheus Veloso
   funcionaria1:  c(""),   // Enfermeira
   funcionaria2:  c(""),   // Técnica de Enfermagem
   funcionaria3:  c(""),   // Recepcionista
@@ -45,18 +45,18 @@ export const images = {
   funcionaria6:  c(""),   // Recepcionista
 
   // ── PÁGINA CONVÊNIOS ───────────────────────────────────────────────────────
-  conveniosBanner: c(""),  // Foto no topo da página Convênios
+  conveniosBanner: c("65b2284e-c5d1-43d0-93d9-45b693c34f61_lj0o6l"),  // Foto no topo da página Convênios
 
   // ── PÁGINA BLOG ────────────────────────────────────────────────────────────
-  blogBanner: c(""),  // Foto no topo da página Blog
+  blogBanner: c("0G6A1018_eeyodi"),  // Foto no topo da página Blog
 
   // ── PÁGINA CONTATO ─────────────────────────────────────────────────────────
-  contatoBanner: c(""),  // Foto no topo da página Contato
+  contatoBanner: c("65b2284e-c5d1-43d0-93d9-45b693c34f61_lj0o6l"),  // Foto no topo da página Contato
 
   // ── PÁGINA GALERIA — Tab "Clínica" ─────────────────────────────────────────
-  galeriaClinica1: c("0G6A1403_q9pk2q"),  // Recepção
-  galeriaClinica2: c(""),                  // Sala de exames
-  galeriaClinica3: c(""),                  // Sala de laudos
+  galeriaClinica1: c("0G6A0756_hzziga"),  // Recepção
+  galeriaClinica2: c("0G6A1403_q9pk2q"),                  // Sala de exames
+  galeriaClinica3: c("0G6A1197_vonjbb"),                  // Sala de laudos
   galeriaClinica4: c(""),                  // Espaço de espera
 
   // ── PÁGINA GALERIA — Tab "Equipamentos" ───────────────────────────────────
