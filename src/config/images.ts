@@ -40,12 +40,9 @@ export const images = {
   draCristina:   c("0G6A0127_obbn7h"),   // Foto Dra. Cristina Veloso Andreacci
   helen:         c("0G6A0006_mqxuj8"),   // Foto Dr. Matheus Veloso
   eduardo:       c("WhatsApp_Image_2026-05-08_at_18.14.13_1_l3f0se"), // Foto Eduardo Veloso
-  funcionaria1:  c(""),   // Enfermeira
-  funcionaria2:  c(""),   // Técnica de Enfermagem
-  funcionaria3:  c(""),   // Recepcionista
-  funcionaria4:  c(""),   // Auxiliar Administrativo
-  funcionaria5:  c(""),   // Técnica em Ultrassonografia
-  funcionaria6:  c(""),   // Recepcionista
+  luana:         c("luana"),    // Recepção
+  patricia:      c("patricia"), // Técnica de Enfermagem
+  lauane:        c("lauane"),   // Protocolos e Planejamento Gestacional
 
   // ── PÁGINA CONVÊNIOS ───────────────────────────────────────────────────────
   conveniosBanner: c("65b2284e-c5d1-43d0-93d9-45b693c34f61_lj0o6l"),  // Foto no topo da página Convênios

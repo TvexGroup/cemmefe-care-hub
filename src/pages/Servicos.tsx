@@ -99,8 +99,44 @@ const categories = [
         description: "Intervenção cirúrgica uterina realizada para remoção de restos ovulares após aborto espontâneo, tratamento de sangramento anormal ou coleta de material para análise histológica.",
       },
       {
-        name: "Histerectomia",
+        name: "Laqueadura",
+        description: "Método cirúrgico definitivo de contracepção feminina, realizado por videolaparoscopia com mínima invasão e rápida recuperação.",
+      },
+      {
+        name: "Cistos",
+        description: "Tratamento cirúrgico de cistos ovarianos benignos ou suspeitos, com preservação do ovário sempre que possível e técnica minimamente invasiva.",
+      },
+      {
+        name: "Miomas",
+        description: "Remoção de miomas uterinos (miomectomia) por via laparoscópica ou histeroscópica, aliviando sintomas como sangramento intenso e dor pélvica com preservação uterina.",
+      },
+      {
+        name: "Histerectomia (retirada do útero)",
         description: "Cirurgia de remoção do útero indicada no tratamento de miomas, endometriose avançada, prolapso uterino ou neoplasias. Realizada com técnica minimamente invasiva sempre que possível.",
+      },
+      {
+        name: "Endometriose",
+        description: "Tratamento cirúrgico da endometriose com excisão dos focos da doença por videolaparoscopia, reduzindo a dor pélvica e melhorando a qualidade de vida e a fertilidade.",
+      },
+      {
+        name: "Endometrioma",
+        description: "Remoção cirúrgica de cistos de endometriose nos ovários (endometriomas), com cuidado na preservação da reserva ovariana e alívio dos sintomas.",
+      },
+      {
+        name: "Histeroscopia",
+        description: "Procedimento endoscópico que permite visualizar e tratar patologias dentro da cavidade uterina, como pólipos, miomas submucosos, sinéquias e espessamentos, sem necessidade de cortes.",
+      },
+      {
+        name: "Espessamento Endometrial",
+        description: "Tratamento cirúrgico do espessamento do endométrio por histeroscopia, com coleta de material para biópsia e resolução da causa do sangramento uterino anormal.",
+      },
+      {
+        name: "Pólipos",
+        description: "Remoção de pólipos uterinos ou cervicais por histeroscopia, procedimento ambulatorial de rápida execução e recuperação, que alivia sangramentos irregulares e melhora a fertilidade.",
+      },
+      {
+        name: "Sinéquias",
+        description: "Tratamento cirúrgico de aderências intrauterinas (sinéquias) por histeroscopia, restaurando a cavidade uterina e melhorando as condições para gestação.",
       },
       {
         name: "CAF (Cirurgia de Alta Frequência)",

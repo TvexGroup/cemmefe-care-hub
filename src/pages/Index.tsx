@@ -59,9 +59,8 @@ const services = [
 const stats = [
   { value: "15+", label: "Anos de Experiência" },
   { value: "10k+", label: "Pacientes Atendidas" },
-  { value: "5", label: "Especialistas" },
-  { value: "1", label: "Convênio Credenciado" },
-  { value: "20+", label: "Tipos de Exames" },
+  { value: "50+", label: "Tipos de Serviços" },
+  { value: "1°", label: "Melhor Imagem do Brasil pela Samsung" },
 ];
 
 const differentials = [

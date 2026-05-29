@@ -67,9 +67,9 @@ const Sobre = () => (
     <section className="section-padding" style={{ backgroundColor: '#FDE2D4' }}>
       <div className="container mx-auto max-w-3xl">
         <motion.div {...fadeUp} className="relative pl-8 border-l-4 border-primary">
-          <h2 className="text-3xl font-heading font-bold mb-6" style={{ color: '#1A1A1A' }}>Manifesto CEMMEFE</h2>
+          <h2 className="text-3xl font-heading font-bold mb-6" style={{ color: '#1A1A1A' }}>Propósito</h2>
           <p className="text-lg leading-relaxed italic" style={{ color: '#2C2C2C' }}>
-            Insira aqui o texto do Manifesto CEMMEFE.
+            Que todas as famílias que passarem pelo Cemmefe se sintam acolhidas e tenham a segurança que fazemos o melhor para sua saúde.
           </p>
         </motion.div>
       </div>

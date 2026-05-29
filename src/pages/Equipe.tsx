@@ -58,12 +58,9 @@ const doctors = [
 ];
 
 const staff = [
-  { name: "Nome do Profissional", role: "Enfermeira", img: images.funcionaria1 },
-  { name: "Nome do Profissional", role: "Técnica de Enfermagem", img: images.funcionaria2 },
-  { name: "Nome do Profissional", role: "Recepcionista", img: images.funcionaria3 },
-  { name: "Nome do Profissional", role: "Auxiliar Administrativo", img: images.funcionaria4 },
-  { name: "Nome do Profissional", role: "Técnica em Ultrassonografia", img: images.funcionaria5 },
-  { name: "Nome do Profissional", role: "Recepcionista", img: images.funcionaria6 },
+  { name: "Luana Oliveira",    role: "Recepção",                             img: images.luana,    imgPos: "center 30%" },
+  { name: "Patrícia Sloniak", role: "Técnica de Enfermagem",                img: images.patricia, imgPos: "center 20%" },
+  { name: "Lauane Oliveira",  role: "Protocolos e Planejamento Gestacional", img: images.lauane,   imgPos: "center 20%" },
 ];
 
 const Equipe = () => {
@@ -149,16 +146,35 @@ const Equipe = () => {
       {/* Staff */}
       <section className="section-padding bg-muted">
         <div className="container mx-auto max-w-5xl">
-           <motion.h2 {...fadeUp} className="text-3xl font-heading font-bold text-secondary text-left md:text-center mb-4">Nossa Equipe</motion.h2>
+           <motion.h2 {...fadeUp} className="text-3xl font-heading font-bold text-secondary text-left md:text-center mb-4">Atendimento e Experiência</motion.h2>
            <motion.p {...fadeUp} className="text-muted-foreground text-left md:text-center mb-12 max-w-2xl md:mx-auto">Profissionais comprometidos com a excelência no atendimento</motion.p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {staff.map((member, i) => (
               <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.1 }} className="rounded-xl bg-background border border-border overflow-hidden text-left md:text-center">
-                <img src={member.img} alt={member.name} className="w-full h-56 object-cover" loading="lazy" />
+                <img src={member.img} alt={member.name} className="w-full h-56 object-cover" style={{ objectPosition: member.imgPos }} loading="lazy" />
                 <div className="p-5">
                   <h3 className="font-heading font-semibold text-secondary">{member.name}</h3>
                   <p className="text-muted-foreground text-sm">{member.role}</p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Back Office */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto max-w-5xl">
+          <motion.h2 {...fadeUp} className="text-3xl font-heading font-bold text-secondary text-left md:text-center mb-12">Back Office</motion.h2>
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              { name: "Ellis Micheletti", role: "Administrativo" },
+              { name: "Thiago Veloso",    role: "Estratégia e Projetos" },
+              { name: "Emili Loffler",    role: "Apresentação e Conservação do Local" },
+            ].map((member, i) => (
+              <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.1 }} className="rounded-xl bg-muted border border-border p-8 flex flex-col items-center text-center w-56">
+                <h3 className="font-heading font-semibold text-secondary">{member.name}</h3>
+                <p className="text-muted-foreground text-sm mt-1">{member.role}</p>
               </motion.div>
             ))}
           </div>
