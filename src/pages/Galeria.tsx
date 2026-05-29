@@ -3,37 +3,72 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import HeroBanner from "@/components/HeroBanner";
 import SeoHead from "@/components/SeoHead";
-import { images } from "@/config/images";
+
+const CLOUD = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const c = (id: string) => `https://res.cloudinary.com/${CLOUD}/image/upload/${id}`;
 
 const tabs = [
   {
     key: "clinica",
     title: "Clínica",
     images: [
-      { src: images.galeriaClinica1, alt: "Recepção da clínica CEMMEFE", caption: "Recepção" },
-      { src: images.galeriaClinica2, alt: "Sala de exames CEMMEFE", caption: "Sala de exames" },
-      { src: images.galeriaClinica3, alt: "Sala de laudos CEMMEFE", caption: "Sala de laudos" },
-      { src: images.galeriaClinica4, alt: "Espaço acolhedor", caption: "Espaço de espera" },
+      c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),
     ],
   },
   {
     key: "equipamentos",
     title: "Equipamentos",
     images: [
-      { src: images.galeriaEquipamento1, alt: "Equipamento de ultrassonografia", caption: "Ultrassonografia" },
-      { src: images.galeriaEquipamento2, alt: "Sala de procedimentos", caption: "Sala de procedimentos" },
-      { src: images.galeriaEquipamento3, alt: "Equipamento moderno", caption: "Equipamentos modernos" },
-      { src: images.galeriaEquipamento4, alt: "Equipamento de diagnóstico", caption: "Diagnóstico por imagem" },
+      c("0G6A9997_bbrrto"),
+      c("0G6A9964_hysmaa"),
+      c("0G6A0104_y0wdfo"),
+      c("0G6A1229_wlyhaq"),
+      c("0G6A1197_vonjbb"),
     ],
   },
   {
     key: "eventos",
     title: "Eventos",
     images: [
-      { src: images.galeriaEvento1, alt: "Evento CEMMEFE", caption: "Encontro com pacientes" },
-      { src: images.galeriaEvento2, alt: "Palestra CEMMEFE", caption: "Palestra educativa" },
-      { src: images.galeriaEvento3, alt: "Workshop CEMMEFE", caption: "Workshop da equipe" },
-      { src: images.galeriaEvento4, alt: "Confraternização CEMMEFE", caption: "Confraternização" },
+      c("0G6A1014_gaakzy"),
+      c("0G6A1357_lzuswk"),
+      c("IMG_0245_zjdv3b"),
+      c("IMG_0237_telghn"),
+      c("IMG_0234_lbizgw"),
+      c("IMG_0236_cmgwxo"),
+      c("IMG_0222_fizfyh"),
+      c("IMG_0224_bwmolc"),
+      c("IMG_0214_facp1h"),
+      c("0G6A1406_loebvd"),
+      c("0G6A1393_szlcx4"),
+      c("0G6A1403_q9pk2q"),
+      c("0G6A1377_zniolc"),
+      c("0G6A1366_o5wswy"),
+      c("0G6A1350_p6zn65"),
+      c("0G6A1341_eju8xw"),
+      c("0G6A1322_eozgnw"),
+      c("0G6A1304_finefu"),
+      c("0G6A1256_rpm4bc"),
+      c("0G6A1245_uoiais"),
+      c("0G6A1239_vc1nef"),
+      c("0G6A1209_ev1ptj"),
+      c("0G6A1199_qmu3lb"),
+      c("0G6A1172_kydkd3"),
+      c("0G6A1183_a3mrk1"),
+      c("0G6A1109_gi4uug"),
+      c("0G6A1152_x1o32e"),
+      c("0G6A1086_rreu3c"),
+      c("0G6A1064_gwllsy"),
+      c("0G6A0944_r7ekez"),
+      c("0G6A1022_wz4rb2"),
+      c("0G6A0962_izmxs6"),
+      c("0G6A0913_gkdugn"),
+      c("0G6A0941_oc7yip"),
+      c("0G6A0870_czsdqj"),
+      c("0G6A0860_i1svbd"),
+      c("0G6A0787_rgii8s"),
+      c("0G6A0754_yr6jf7"),
+      c("0G6A0749_vtlabo"),
     ],
   },
 ];
@@ -89,25 +124,20 @@ const Galeria = () => {
             className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mx-4 px-4"
             style={{ scrollbarWidth: "none" }}
           >
-            {active.images.map((img, i) => (
+            {active.images.map((src, i) => (
               <button
                 key={`${active.key}-${i}`}
-                onClick={() => setLightbox(img.src)}
-                className="snap-start shrink-0 w-[70%] sm:w-[45%] md:w-[32%] lg:w-[28%] group text-left"
+                onClick={() => setLightbox(src)}
+                className="snap-start shrink-0 w-[70%] sm:w-[45%] md:w-[32%] lg:w-[28%] group"
               >
                 <div className="overflow-hidden rounded-2xl">
                   <img
-                    src={img.src}
-                    alt={img.alt}
+                    src={src}
+                    alt="CEMMEFE"
                     className="w-full h-[240px] md:h-[340px] object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
-                {img.caption && (
-                  <p className="mt-3 text-sm md:text-base font-medium text-secondary">
-                    {img.caption}
-                  </p>
-                )}
               </button>
             ))}
           </div>

@@ -72,6 +72,7 @@ const Contato = () => {
                     { handle: "@cemmefesms", url: "https://www.instagram.com/cemmefesms/" },
                     { handle: "@matheusvelosolopes", url: "https://www.instagram.com/matheusvelosolopes/" },
                     { handle: "@drcristinaveloso", url: "https://www.instagram.com/drcristinaveloso/" },
+                    { handle: "@psi.eduardoveloso", url: "https://www.instagram.com/psi.eduardoveloso/" },
                   ].map((s) => (
                     <a key={s.handle} href={s.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-primary transition-colors">
                       <Instagram size={16} /> {s.handle}
