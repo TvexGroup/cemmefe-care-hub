@@ -84,14 +84,36 @@ const categories = [
   {
     id: "cirurgias",
     title: "Cirurgias",
-    intro: "Realizamos procedimentos cirúrgicos ginecológicos com técnicas modernas e minimamente invasivas, priorizando segurança, conforto e rápida recuperação. Em breve, mais informações sobre cada cirurgia oferecida pela CEMMEFE.",
+    intro: "Realizamos procedimentos cirúrgicos com técnicas modernas e foco em segurança, conforto e rápida recuperação. Cada cirurgia é planejada de forma individualizada, com acompanhamento especializado em todas as etapas.",
     items: [
-      { name: "Cirurgia 1", description: "Descrição placeholder do procedimento cirúrgico. Substituir pelo conteúdo real." },
-      { name: "Cirurgia 2", description: "Descrição placeholder do procedimento cirúrgico. Substituir pelo conteúdo real." },
-      { name: "Cirurgia 3", description: "Descrição placeholder do procedimento cirúrgico. Substituir pelo conteúdo real." },
-      { name: "Cirurgia 4", description: "Descrição placeholder do procedimento cirúrgico. Substituir pelo conteúdo real." },
-      { name: "Cirurgia 5", description: "Descrição placeholder do procedimento cirúrgico. Substituir pelo conteúdo real." },
-      { name: "Cirurgia 6", description: "Descrição placeholder do procedimento cirúrgico. Substituir pelo conteúdo real." },
+      {
+        name: "Cesárea",
+        description: "Parto cirúrgico realizado com técnica precisa e ambiente preparado para garantir segurança máxima à mãe e ao bebê. Indicada por critérios clínicos ou a pedido da paciente, com acompanhamento completo no pré e pós-operatório.",
+      },
+      {
+        name: "Cerclagem",
+        description: "Procedimento cirúrgico de sutura do colo do útero indicado em gestações com risco de incompetência istmocervical, prevenindo o parto prematuro e protegendo a gravidez.",
+      },
+      {
+        name: "Curetagem",
+        description: "Intervenção cirúrgica uterina realizada para remoção de restos ovulares após aborto espontâneo, tratamento de sangramento anormal ou coleta de material para análise histológica.",
+      },
+      {
+        name: "Histerectomia",
+        description: "Cirurgia de remoção do útero indicada no tratamento de miomas, endometriose avançada, prolapso uterino ou neoplasias. Realizada com técnica minimamente invasiva sempre que possível.",
+      },
+      {
+        name: "CAF (Cirurgia de Alta Frequência)",
+        description: "Procedimento ambulatorial para excisão de lesões precursoras do colo do útero (NIC), utilizando alça de alta frequência com precisão e mínimo sangramento. Indicada após colposcopia e biópsia confirmatórias.",
+      },
+      {
+        name: "Bartolinectomia",
+        description: "Remoção cirúrgica da glândula de Bartholin indicada em casos de cistos recorrentes ou abscessos de difícil resolução clínica, com recuperação rápida e resultado definitivo.",
+      },
+      {
+        name: "Períneo",
+        description: "Cirurgia de reconstrução ou correção da região perineal, indicada após lacerações no parto, episiotomias mal cicatrizadas ou queixas funcionais e estéticas. Realizada com cuidado e técnica voltados ao conforto da paciente.",
+      },
     ],
   },
   {
