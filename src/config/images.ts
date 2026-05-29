@@ -20,7 +20,8 @@ export const images = {
   slide3: c("0G6A1393_szlcx4"),  // 3ª foto do carrossel
 
   // ── PÁGINA INICIAL — Seção "Sobre a clínica" ───────────────────────────────
-  homepageClinica: c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),
+  homepageClinica:    c("91cc9a95-38e4-4248-a8ed-7bc0364d9bd4_ndarak"),
+  homepageUltrassom:  c("0G6A0104_y0wdfo"),                             // Equipamento de ultrassonografia
 
   // ── PÁGINA INICIAL — Seção "Nossa Equipe" ─────────────────────────────────
   homepageDraCristina: c("0G6A9923_vkkoto"),    // Foto Dra. Cristina (card na homepage)

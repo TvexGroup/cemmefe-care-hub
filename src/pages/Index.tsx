@@ -269,7 +269,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeUp}>
               <img
-                src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+                src={images.homepageUltrassom}
                 alt="Equipamento de ultrassonografia"
                 className="w-full rounded-xl object-cover aspect-[4/3]"
                 loading="lazy"
