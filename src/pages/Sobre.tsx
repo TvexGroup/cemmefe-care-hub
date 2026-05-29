@@ -8,24 +8,31 @@ import { images } from "@/config/images";
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
 const timeline = [
-  { year: "2010", text: "Fundação do CEMMEFE pela Dra. Cristina Veloso Andreacci e Dr. Celso Andreacci" },
+  { year: "2013", text: "Fundação do CEMMEFE pela Dra. Cristina Veloso Andreacci e Dr. Celso Andreacci" },
   { year: "2015", text: "Ampliação do centro de ultrassonografia com equipamentos de última geração" },
   { year: "2018", text: "Prêmio de melhor imagem do Brasil pela SAMSUNG" },
-  { year: "2021", text: "Doações de aproximadamente R$ 15.000 em consultas e exames para a comunidade. Mutirão de Natal ajudou 103 famílias" },
   { year: "2024", text: "Modernização contínua e incorporação de novas tecnologias em medicina fetal" },
+  { year: "2025", text: "Inauguração da nova sede da CEMMEFE em São Mateus do Sul" },
 ];
 
 const timelineMilestones = [
-  { year: "2010", title: "Ano de Fundação", text: "Início das atividades do CEMMEFE em São Mateus do Sul." },
+  { year: "2013", title: "Ano de Fundação", text: "Início das atividades do CEMMEFE em São Mateus do Sul." },
   { year: "2015", title: "Expansão da Clínica", text: "Ampliação do centro de ultrassonografia com novos equipamentos." },
   { year: "2018", title: "Reconhecimento Nacional", text: "Prêmio de melhor imagem do Brasil pela SAMSUNG." },
-  { year: "2021", title: "Impacto Social", text: "Mais de R$ 15.000 em doações e atendimento a 103 famílias." },
   { year: "2024", title: "Nova Tecnologia", text: "Incorporação de novas tecnologias em medicina fetal." },
+  { year: "2025", title: "Nova Sede", text: "Inauguração da nova sede da CEMMEFE em São Mateus do Sul." },
+];
+
+const congressos = [
+  { cidade: "Roma", pais: "Itália" },
+  { cidade: "Londres", pais: "Inglaterra" },
+  { cidade: "Praga", pais: "República Tcheca" },
+  { cidade: "Boston", pais: "Estados Unidos" },
 ];
 
 const Sobre = () => (
   <>
-    <SeoHead title="Sobre | CEMMEFE - Centro Médico e Medicina Fetal em São Mateus do Sul" description="Conheça a história do CEMMEFE, fundado em 2010 em São Mateus do Sul. Mais de 25 anos de experiência em ginecologia, obstetrícia e medicina fetal." path="/sobre" />
+    <SeoHead title="Sobre | CEMMEFE - Centro Médico e Medicina Fetal em São Mateus do Sul" description="Conheça a história do CEMMEFE, fundado em 2013 em São Mateus do Sul. Referência em ginecologia, obstetrícia e medicina fetal com presença em congressos internacionais." path="/sobre" />
 
     <HeroBanner title="Nossa História e Missão" subtitle="Conheça a CEMMEFE e nosso compromisso com a saúde da mulher" image={images.sobreBanner} />
 
@@ -41,9 +48,9 @@ const Sobre = () => (
           </motion.div>
           <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="text-left">
             <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">Quem Somos</p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-secondary mb-6">Excelência em medicina fetal desde 2010</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-secondary mb-6">Excelência em medicina fetal desde 2013</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              O CEMMEFE — Centro da Mulher e Medicina Fetal — foi fundado em 2010 pela Dra. Cristina Veloso Andreacci, especialista em Medicina Fetal, Ginecologia e Obstetrícia, juntamente com o Dr. Celso Andreacci, especialista em Obstetrícia e Ginecologia.
+              O CEMMEFE — Centro da Mulher e Medicina Fetal — foi fundado em 2013 pela Dra. Cristina Veloso Andreacci, especialista em Medicina Fetal, Ginecologia e Obstetrícia, juntamente com o Dr. Celso Andreacci, especialista em Obstetrícia e Ginecologia.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Com recursos tecnológicos avançados, somos capazes de diagnosticar e tratar diversas condições ainda durante a gestação, planejando o melhor cenário para o nascimento do bebê com segurança e cuidado.
@@ -213,6 +220,35 @@ const Sobre = () => (
               );
             })}
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Congressos Internacionais */}
+    <section className="section-padding bg-background">
+      <div className="container mx-auto max-w-4xl">
+        <motion.div {...fadeUp} className="text-left md:text-center mb-10">
+          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">Presença Global</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-secondary mb-4">Congressos Nacionais e Internacionais</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Ao longo de toda a sua trajetória, o CEMMEFE esteve presente nos maiores eventos de medicina fetal do mundo, levando e trazendo as mais recentes inovações em saúde da mulher.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+          {congressos.map((c, i) => (
+            <motion.div
+              key={i}
+              {...fadeUp}
+              transition={{ delay: i * 0.1 }}
+              className="rounded-xl border border-border bg-background p-6 flex flex-col items-center text-center hover:shadow-sm transition-shadow"
+            >
+              <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#FDE2D4' }}>
+                <span className="text-lg">✈️</span>
+              </div>
+              <p className="font-heading font-semibold text-secondary text-base">{c.cidade}</p>
+              <p className="text-sm text-muted-foreground mt-1">{c.pais}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
