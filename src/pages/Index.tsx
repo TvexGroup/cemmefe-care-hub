@@ -60,7 +60,7 @@ const stats = [
   { value: "15+", label: "Anos de Experiência" },
   { value: "10k+", label: "Pacientes Atendidas" },
   { value: "5", label: "Especialistas" },
-  { value: "25+", label: "Convênios Credenciados" },
+  { value: "1", label: "Convênio Credenciado" },
   { value: "20+", label: "Tipos de Exames" },
 ];
 
