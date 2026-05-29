@@ -7,11 +7,15 @@ const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0
 
 const conveniosAtivos = [
   { name: "CDL" },
+  { name: "MILI" },
 ];
 
 const conveniosPendentes = [
   { name: "Unimed" },
+  { name: "Bradesco" },
+  { name: "Petrobras" },
   { name: "São Camilo" },
+  { name: "Medprev" },
 ];
 
 const Convenios = () => (
