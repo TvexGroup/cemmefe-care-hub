@@ -24,10 +24,10 @@ const timelineMilestones = [
 ];
 
 const congressos = [
-  { cidade: "Roma", pais: "Itália" },
-  { cidade: "Londres", pais: "Inglaterra" },
-  { cidade: "Praga", pais: "República Tcheca" },
-  { cidade: "Boston", pais: "Estados Unidos" },
+  { cidade: "Roma", pais: "Itália", bandeira: "🇮🇹" },
+  { cidade: "Londres", pais: "Inglaterra", bandeira: "🇬🇧" },
+  { cidade: "Praga", pais: "República Tcheca", bandeira: "🇨🇿" },
+  { cidade: "Boston", pais: "Estados Unidos", bandeira: "🇺🇸" },
 ];
 
 const Sobre = () => (
@@ -243,7 +243,7 @@ const Sobre = () => (
               className="rounded-xl border border-border bg-background p-6 flex flex-col items-center text-center hover:shadow-sm transition-shadow"
             >
               <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#FDE2D4' }}>
-                <span className="text-lg">✈️</span>
+                <span className="text-2xl">{c.bandeira}</span>
               </div>
               <p className="font-heading font-semibold text-secondary text-base">{c.cidade}</p>
               <p className="text-sm text-muted-foreground mt-1">{c.pais}</p>
